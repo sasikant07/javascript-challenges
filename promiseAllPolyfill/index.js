@@ -43,9 +43,9 @@ function myPromiseAll(promises) {
     // return new promise
     return new Promise((resolve, reject) => {
   
-      promises.forEach((promise, index) => {
+      promises.forEach((task, index) => {
        //if promise passes
-        promise.then((val) => {
+        task.then((val) => {
           //store its outcome and increment the count 
           results[index] = val;
           promisesCompleted++;
