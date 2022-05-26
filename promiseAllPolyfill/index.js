@@ -49,7 +49,7 @@ function myPromiseAll(promises) {
           //store its outcome and increment the count 
           results[index] = val;
           promisesCompleted++;
-          
+                                                  
           //if all the promises are completed, 
           //resolve and return the result
           if (promisesCompleted === promises.length) {
