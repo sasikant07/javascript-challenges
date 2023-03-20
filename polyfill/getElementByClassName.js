@@ -1,0 +1,2 @@
+// Polyfill for document.getElementByClassName()
+
