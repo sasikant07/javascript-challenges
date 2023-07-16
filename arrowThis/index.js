@@ -20,3 +20,17 @@ obj.hello();    // => Hello this is undefined
 
 // this keyword will not work within the arrow functions such as event handlers, object method, 
 // prototype methods, function that use arguments object.
+
+
+// No.2
+const data = {
+    name: "Neeraj",
+    age: 25,
+    greet: function() {
+      setTimeout(function() {
+        console.log("hello " + this.name);      // hello undefined   --> change this.name to data.name
+      })
+    }
+  }
+  
+  data.greet();
