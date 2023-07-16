@@ -23,3 +23,5 @@ console.log("7" - "2" + "-1");  // => 5 -1
 console.log("7" + "2" + "-1");  // => 72 -1
 console.log("7" + "2" - "-1");  // => 73
 console.log("7" + "2" - "1");  // => 71
+console.log(2 + "2"); // 22
+console.log(3 + +"3"); // 6
