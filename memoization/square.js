@@ -23,3 +23,8 @@ console.log(square(30000)); // 900000000
 console.log(square(30000)); // 900000000
 console.log(square(30000)); // 900000000
 console.log(square(30000)); // 900000000
+
+
+// Memoization is atechnique used in programming to optimize the execution time of functions by caching their result. 
+// It involves stpring the results of expensive function calls and reusing those results when the same inputs 
+// occurs again.
