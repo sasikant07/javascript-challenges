@@ -47,3 +47,24 @@ console.log(a); // => 20
 console.log(b); // => 10
 
 console.log("##################################################")
+
+console.log(null == undefined);     // true
+console.log(null === undefined);    // false
+
+
+console.log(NaN / 2);         // NaN
+console.log(NaN / 'a');         // NaN
+console.log('two' / 2);         // NaN
+console.log(NaN == NaN);    // false
+console.log(NaN == 1);      // false
+console.log(NaN != 1);      // true
+console.log(NaN != NaN);    // true
+
+
+console.log("===================================================");
+
+let result = (10, 10 + 20);
+console.log(result);        // 30
+
+console.log("===================================================");
+
