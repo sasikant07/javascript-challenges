@@ -68,3 +68,30 @@ console.log(result);        // 30
 
 console.log("===================================================");
 
+let y = 1;
+if (function f() {}) {
+    y += typeof f;
+}
+
+console.log(y); // 1undefined       // becuase   function f() {} returns undefined and y value is 1
+
+console.log("=======================================================");
+
+let output = (function(x) {
+    delete x;
+    return x;
+})(5);
+
+console.log(output);    // 5
+
+console.log("=====================================================");
+
+const Employee = {
+    name: "John"
+}
+
+const emp1 = Object.create(Employee);
+delete emp1.name;
+console.log(emp1.name);     // John
+
+console.log("======================================================");
