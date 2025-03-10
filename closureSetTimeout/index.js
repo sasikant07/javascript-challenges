@@ -32,6 +32,37 @@ for (var i = 1; i <= 5; i++) {
         }, i * 1000)
 }
 
+/*
+
+The reason you see the same message after 6 seconds is that the callback passed to the setTimeout() a closure. 
+It remembers the value of i from the last iteration of the loop, which is 6.
+
+In addition, all three closures created by the for-loop share the same global scope access the same value of i.
+
+To fix this issue, you need to create a new closure scope in each iteration of the loop.
+
+There are two popular solutions: IIFE & let keyword.
+
+    // IIFE
+    for (var index = 1; index <= 3; index++) {
+        (function (index) {
+            setTimeout(function () {
+                console.log(index);
+            }, index * 1000);
+        })(index);
+    }
+
+    // Using let
+    for (let index = 1; index <= 3; index++) {
+        setTimeout(function () {
+            console.log(index);
+        }, index * 1000);
+    }
+
+*/
+
+
+
 for (var i = 1; i < 5; i++) {
     setTimeout(() => {
         // console.log(i)      // 5 5 5 5 5
