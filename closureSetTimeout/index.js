@@ -52,12 +52,21 @@ There are two popular solutions: IIFE & let keyword.
         })(index);
     }
 
+    In this solution, you use an immediately invoked function expression (a.k.a IIFE) 
+    because an IIFE creates a new scope by declaring a function and immediately executing it.
+
     // Using let
     for (let index = 1; index <= 3; index++) {
         setTimeout(function () {
             console.log(index);
         }, index * 1000);
     }
+
+    If you use the let keyword in the for-loop, it will create a new lexical scope in each iteration. 
+    In other words, you will have a new index variable in each iteration.
+
+    In addition, the new lexical scope is chained up to the previous scope so that the previous value 
+    of the index is copied from the previous scope to the new one.
 
 */
 
