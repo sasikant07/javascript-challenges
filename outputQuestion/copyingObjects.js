@@ -42,3 +42,13 @@ let oldEmployee = {
   console.log(oldEmployee.address.city);    // New York
   
   console.log(newEmployee.address.city);    // Texas
+
+  //==========================================================================================
+  let orig = { a: 1, b: { c: 1 } }
+let copy = { ...orig }
+
+copy.a = 2;
+copy.b.c = 2;
+
+console.log(orig); // ? { a: 1, b: { c: 2 } }
+console.log(copy); // ? { a: 2, b: { c: 2 } }

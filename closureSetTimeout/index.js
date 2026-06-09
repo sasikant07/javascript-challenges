@@ -92,3 +92,28 @@ for (var i = 0; i < 5; i++) {
     setTimeout(add, i * 1000);  // 5 5 5 5 5
 }
 
+//=========================================================================================
+
+function makeCounter() {
+
+  let count = 0;
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+const counter1 = makeCounter();
+const counter2 = makeCounter();
+
+console.log(counter1()); // ?1
+console.log(counter1()); // ?2
+console.log(counter2()); // ?1
+
+//=========================================================================================
+(function(x) {
+  return (function(y) {
+      console.log(x);
+    })(2)
+})(1); // output: 1
+
